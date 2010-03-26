@@ -1,0 +1,17 @@
+= rdoc2latex
+
+rdoc2latex is a Perl script which generates LaTeX source code from text files
+formatted using the rdoc syntax. It's far from being perfect but works pretty
+well with simple files.
+
+== Usage
+
+  $ ./rdoc2latex.pl < README.rdoc > README.tex
+
+or
+
+  $ ./rdoc2latex.pl < README.rdoc | pdflatex
+
+== Licensing
+
+rdoc2latex is distributed under the terms of MIT License.
