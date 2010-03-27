@@ -26,6 +26,7 @@ use strict;
 print '\documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{a4wide}
+\usepackage{hyperref}
 \begin{document}';
 
 my $verbatim = 0;
@@ -38,6 +39,7 @@ while (<>) {
 		s/^==(.*)/\\subsection{$1}/;
 		s/^=(.*)/\\section{$1}/;
 		s/\+(\S+)\+/\\texttt{$1}/g;
+		s/(\w+)\[(.*?)\]/\\href{$2}{$1}/g;
 		s/#/\\#/g;
 		s/\$/\\\$/g;
 		s/_/\\_/g;
